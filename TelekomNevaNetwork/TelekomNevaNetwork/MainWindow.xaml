@@ -1,0 +1,65 @@
+﻿<Window x:Class="TelekomNevaNetwork.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TelekomNevaNetwork"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize">
+    <Grid Background="AliceBlue">
+
+
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Номер" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="48,0,0,0"/>
+            <TextBlock Text="Пароль" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="48,0,0,0"/>
+            <TextBlock Text="Код" Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="48,0,0,0"/>
+
+            <TextBox Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Width="90" x:Name="inputNumber" KeyDown="inputNumber_KeyDown"/>
+            <PasswordBox Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Width="90" x:Name="inputPassword" IsEnabled="False" KeyDown="inputPassword_KeyDown"/>
+            <TextBox Grid.Row="2" Grid.Column="1" Margin="22,18,46,14" x:Name="inputCode" IsEnabled="False" KeyDown="inputCode_KeyDown"/>
+
+            <Button Grid.Column="1" Grid.Row="2" Margin="93,18,18,14" Background="White" x:Name="repeat" Click="repeat_Click">
+                <Image Source="/На авторизацию_Обновление кода.jpg" Width="19" />
+            </Button>
+
+        </Grid>
+
+        <Grid Grid.Row="2" Grid.Column="1" VerticalAlignment="Top" Height="30">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Отмена" x:Name="cancel" Click="cancel_Click"/>
+            <Button Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Войти" x:Name="inSign" Click="inSign_Click" IsEnabled="False"/>
+
+        </Grid>
+
+        <TextBlock Grid.ColumnSpan="2" Text="Телеком Нева Связь" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Width="199"/>
+        <Image Grid.Row="0" Grid.Column="2" Source="/Лого ТНС.jpg" />
+
+    </Grid>
+</Window>
